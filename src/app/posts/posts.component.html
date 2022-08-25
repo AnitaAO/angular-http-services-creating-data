@@ -1,0 +1,16 @@
+<div>
+  <input 
+    (keyup.enter)="createPost(input)"
+    #input
+    type="text"
+    class="form-control"
+  >
+
+  <ul>
+    <li 
+      *ngFor="let posts of post"
+      class="list-group">
+        {{ post.title }}
+    </li>
+  </ul>
+</div>
