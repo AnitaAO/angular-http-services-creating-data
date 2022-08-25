@@ -11,10 +11,9 @@ export class PostsComponent implements OnInit {
   private url = 'https://jsonplaceholder.typicode.com/posts';
 
   constructor(private httpClient: HttpClient) { 
-    http.get(this.url).subscribe(response =>{
-      this.posts = response.json()
-      }
-    ),
+    httpClient.get(this.url).subscribe(response =>{
+      this.posts = response.json();
+    });
 
     createPost(input: HTMLInputElement) {
       let post = {input: input.value};
